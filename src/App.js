@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Nav from './components/nav'
+import Buildings from './components/building-grid'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+export default function App() {
+  return(
+    <div>
+    <Nav />
+    <div class='hero-wrapper'>
+      <div class='hero-image'></div>
+      <div class='hero-copy'>
+        <h1>Concrete Haus</h1>
+        <p>The home of brutalist architecture</p>
+      </div>
     </div>
-  );
-}
-
-export default App;
+    <Buildings />
+    </div>
+  )
+};
